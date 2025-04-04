@@ -249,7 +249,7 @@ const NewUserProfile = () => {
 
           <div className="flex items-center py-3 border-b border-[#44444459]">
             <p className="w-[200px] text-sm text-black">Account ID</p>
-            <p className="text-sm text-black">{selectedUser.user?._id}</p>
+            <p className="text-sm text-black">{selectedUser.user?.displayName}</p>
           </div>
 
           <div className="flex items-center py-3 border-b border-[#44444459]">
