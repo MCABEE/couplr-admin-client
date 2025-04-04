@@ -44,31 +44,13 @@
 
 // export default Navbar;
 
+"use client";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'use client';
-
-import React, { useState, useRef, useEffect } from 'react';
-import { IoIosArrowDown } from 'react-icons/io';
-import { Toaster } from 'react-hot-toast';
-import { useAuthStore } from '@/lib/store/authStore';
-import { useRouter } from 'next/navigation'; // Import Next.js router
+import React, { useState, useRef, useEffect } from "react";
+import { IoIosArrowDown } from "react-icons/io";
+import { Toaster } from "react-hot-toast";
+import { useAuthStore } from "@/lib/store/authStore";
+import { useRouter } from "next/navigation"; // Import Next.js router
 
 const Navbar = () => {
   const { isAuthenticated, logout, loadToken } = useAuthStore();
@@ -87,14 +69,14 @@ const Navbar = () => {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const handleLogout = () => {
     logout();
     setShowLogout(false);
-    router.push('/'); // Redirect to home
+    router.push("/"); // Redirect to home
   };
 
   return (
@@ -127,5 +109,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-

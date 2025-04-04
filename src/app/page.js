@@ -80,7 +80,7 @@ export default function Home() {
     try {
       const data = await login(email, password);
       setLogin(data.accessToken);
-      router.push("/controlPanel/newSignup");
+      router.push("/controlPanel/user/newSignup");
     } catch (err) {
       setError(err);
     }
@@ -118,7 +118,7 @@ export default function Home() {
                 />
               </div>
               <div className="flex justify-center md:justify-end mt-5">
-                <button type="submit" className="px-10 py-2 text-white rounded-3xl bg-neutral-800">
+                <button type="submit" className="px-10 py-2 text-white rounded-3xl bg-neutral-800 cursor-pointer">
                   Login
                 </button>
               </div>

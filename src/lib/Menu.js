@@ -44,7 +44,7 @@ const employersSubmenu = [{ id: 1, name: "Employer", link: "employer" }];
 
 export const menus = [
   { id: 0, name: "Home", hasSubmenu: false, link: "" },
-  { id: 1, name: "Users", hasSubmenu: false, link: "/controlPanel/newSignup"  },
+  { id: 1, name: "Users", hasSubmenu: false, link: "/controlPanel/user/newSignup"  },
   {
     id: 2,
     name: "Payments",

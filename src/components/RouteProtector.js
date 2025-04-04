@@ -20,8 +20,6 @@
 
 // export default RouteProtector;
 
-
-
 "use client";
 
 import { useEffect } from "react";

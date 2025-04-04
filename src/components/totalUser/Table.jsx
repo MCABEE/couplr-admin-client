@@ -59,11 +59,6 @@
 
 // export default Table;
 
-
-
-
-
-
 "use client";
 import React from "react";
 import { useEffect, useState } from "react";
@@ -89,7 +84,9 @@ const Table = () => {
   useEffect(() => {
     if (newUsers.length > 0) {
       const grouped = newUsers.reduce((acc, user) => {
-        const formattedDate = dayjs(user.createdAt).format("YYYY MMMM DD, dddd");
+        const formattedDate = dayjs(user.createdAt).format(
+          "YYYY MMMM DD, dddd"
+        );
         if (!acc[formattedDate]) {
           acc[formattedDate] = [];
         }
@@ -115,12 +112,24 @@ const Table = () => {
           <table className="w-full border-spacing-y-2 border-separate mt-10 text-black">
             <thead className="bg-[#C0D8F6]">
               <tr className="p-2 bg-[#C0D8F6]">
-                <th className="text-base border-[#F0F4F9] rounded-l-2xl p-2">No</th>
-                <th className="text-base border-l-4 border-[#F0F4F9] p-2">Firstlook_ID</th>
-                <th className="text-base border-l-4 border-[#F0F4F9] p-2">Current Location</th>
-                <th className="text-base border-l-4 border-[#F0F4F9] p-2">Gender</th>
-                <th className="text-base border-l-4 border-[#F0F4F9] p-2">Login</th>
-                <th className="text-base border-l-4 border-[#F0F4F9] p-2 rounded-r-2xl">Status</th>
+                <th className="text-base border-[#F0F4F9] rounded-l-2xl p-2">
+                  No
+                </th>
+                <th className="text-base border-l-4 border-[#F0F4F9] p-2">
+                  Firstlook_ID
+                </th>
+                <th className="text-base border-l-4 border-[#F0F4F9] p-2">
+                  Current Location
+                </th>
+                <th className="text-base border-l-4 border-[#F0F4F9] p-2">
+                  Gender
+                </th>
+                <th className="text-base border-l-4 border-[#F0F4F9] p-2">
+                  Login
+                </th>
+                <th className="text-base border-l-4 border-[#F0F4F9] p-2 rounded-r-2xl">
+                  Status
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -136,11 +145,16 @@ const Table = () => {
                   {users.map((user, index) => (
                     <tr key={user._id} className="bg-white">
                       <td className="p-2">{index + 1}</td>
-                      <td className="border-l-4 border-[#C0D8F6] p-2">{user._id}</td>
                       <td className="border-l-4 border-[#C0D8F6] p-2">
-                        {user.currentLocation?.city || "N/A"}, {user.currentLocation?.country || "N/A"}
+                        {user._id}
                       </td>
-                      <td className="border-l-4 border-[#C0D8F6] p-2">{user.gender || "N/A"}</td>
+                      <td className="border-l-4 border-[#C0D8F6] p-2">
+                        {user.currentLocation?.city || "N/A"},{" "}
+                        {user.currentLocation?.country || "N/A"}
+                      </td>
+                      <td className="border-l-4 border-[#C0D8F6] p-2">
+                        {user.gender || "N/A"}
+                      </td>
                       <td className="border-x-4 border-[#C0D8F6] p-2">
                         {user.isVerified ? "Yes" : "No"}
                       </td>
@@ -155,7 +169,9 @@ const Table = () => {
           {/* Pagination Controls */}
           <div className="flex justify-between items-center mt-4 gap-4">
             <button
-              className={`px-4 py-2 border rounded ${currentPage === 1 ? "bg-gray-300" : "bg-[#72acf2] text-white"}`}
+              className={`px-4 py-2 border rounded ${
+                currentPage === 1 ? "bg-gray-300" : "bg-[#72acf2] text-white"
+              }`}
               onClick={() => handlePageChange(currentPage - 1)}
               disabled={currentPage === 1}
             >
@@ -163,7 +179,11 @@ const Table = () => {
             </button>
             <span className="text-lg text-black">{`Page ${currentPage} of ${totalPages}`}</span>
             <button
-              className={`px-4 py-2 border rounded ${currentPage === totalPages ? "bg-gray-300" : "bg-[#72acf2] text-white"}`}
+              className={`px-4 py-2 border rounded ${
+                currentPage === totalPages
+                  ? "bg-gray-300"
+                  : "bg-[#72acf2] text-white"
+              }`}
               onClick={() => handlePageChange(currentPage + 1)}
               disabled={currentPage === totalPages}
             >
