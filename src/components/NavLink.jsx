@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { usePathname } from 'next/navigation';
-import Link from 'next/link';
-import Image from 'next/image';
+import React, { useState } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+import Image from "next/image";
 
 const NavLink = () => {
   const [showSecondDiv, setShowSecondDiv] = useState(false);
@@ -20,22 +20,22 @@ const NavLink = () => {
           <Link
             href="/photos"
             className={`h-full flex justify-center items-center text-base text-black cursor-pointer px-2 ${
-              isActive('/photos') || selectedItem === 'photos'
-                ? 'border-b-8 border-[#1982FE]'
-                : 'border-b-2 border-transparent'
+              isActive("/photos") || selectedItem === "photos"
+                ? "border-b-8 border-[#1982FE]"
+                : "border-b-2 border-transparent"
             }`}
-            onClick={() => setSelectedItem('photos')}
+            onClick={() => setSelectedItem("photos")}
           >
             Photos
           </Link>
           <Link
             href="/videos"
             className={`h-full flex justify-center items-center text-base text-black cursor-pointer px-2 ${
-              isActive('/videos') || selectedItem === 'videos'
-                ? 'border-b-8 border-[#1982FE]'
-                : 'border-b-2 border-transparent'
+              isActive("/videos") || selectedItem === "videos"
+                ? "border-b-8 border-[#1982FE]"
+                : "border-b-2 border-transparent"
             }`}
-            onClick={() => setSelectedItem('videos')}
+            onClick={() => setSelectedItem("videos")}
           >
             Videos
           </Link>
@@ -43,11 +43,11 @@ const NavLink = () => {
             role="button"
             tabIndex={0}
             className={`h-full flex justify-center items-center text-base text-black cursor-pointer px-2 ${
-              selectedItem === 'stories'
-                ? 'border-b-8 border-[#1982FE]'
-                : 'border-b-2 border-transparent'
+              selectedItem === "stories"
+                ? "border-b-8 border-[#1982FE]"
+                : "border-b-2 border-transparent"
             }`}
-            onClick={() => setSelectedItem('stories')}
+            onClick={() => setSelectedItem("stories")}
           >
             Stories
           </p>
@@ -60,7 +60,9 @@ const NavLink = () => {
       {/* Second Div */}
       <div
         className={`w-full h-[72px] bg-white rounded-[15px] border border-gray-300 flex justify-between items-center px-10 mt-2 transition-all duration-300 ease-in-out ${
-          showSecondDiv ? 'opacity-100 translate-y-0 visible' : 'opacity-0 -translate-y-3 invisible'
+          showSecondDiv
+            ? "opacity-100 translate-y-0 visible"
+            : "opacity-0 -translate-y-3 invisible"
         }`}
       >
         <div className="flex gap-x-16">

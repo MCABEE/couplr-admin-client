@@ -1,100 +1,96 @@
-  // "use client";
+// "use client";
 
-  // import React, { useState } from "react";
-  // import { IoIosArrowDown } from "react-icons/io";
-  // import { useRouter } from "next/navigation";
-  // import Image from "next/image";
-  // import Link from "next/link";
-  // import { menus } from "../lib/Menu";
-  // const Sidebar = () => {
-  //   const [active, setActive] = useState("Home");
-  //   const [activeSubMenu, setActiveSubMenu] = useState("");
-  //   const [activeSubSubMenu, setActiveSubSubMenu] = useState(""); // Track sub-submenu
-  //   const router = useRouter();
+// import React, { useState } from "react";
+// import { IoIosArrowDown } from "react-icons/io";
+// import { useRouter } from "next/navigation";
+// import Image from "next/image";
+// import Link from "next/link";
+// import { menus } from "../lib/Menu";
+// const Sidebar = () => {
+//   const [active, setActive] = useState("Home");
+//   const [activeSubMenu, setActiveSubMenu] = useState("");
+//   const [activeSubSubMenu, setActiveSubSubMenu] = useState(""); // Track sub-submenu
+//   const router = useRouter();
 
-  //   const handleMenuClick = (item) => {
-  //     setActive((prev) => (prev !== item.name ? item.name : prev)); // Keep item selected
-  //     setActiveSubMenu(""); // Reset submenu when switching
-  //     setActiveSubSubMenu("");
-  //     if (item.link) router.push(item.link);
-  //   };
+//   const handleMenuClick = (item) => {
+//     setActive((prev) => (prev !== item.name ? item.name : prev)); // Keep item selected
+//     setActiveSubMenu(""); // Reset submenu when switching
+//     setActiveSubSubMenu("");
+//     if (item.link) router.push(item.link);
+//   };
 
-  //   const handleSubMenuClick = (subItem) => {
-  //     setActiveSubMenu((prev) => (prev !== subItem.name ? subItem.name : prev));
-  //     setActiveSubSubMenu("");
-  //     if (subItem.link) router.push(subItem.link);
-  //   };
+//   const handleSubMenuClick = (subItem) => {
+//     setActiveSubMenu((prev) => (prev !== subItem.name ? subItem.name : prev));
+//     setActiveSubSubMenu("");
+//     if (subItem.link) router.push(subItem.link);
+//   };
 
-  //   const handleSubSubMenuClick = (subSubItem) => {
-  //     setActiveSubSubMenu((prev) => (prev !== subSubItem.name ? subSubItem.name : prev));
-  //     if (subSubItem.link) router.push(subSubItem.link);
-  //   };
+//   const handleSubSubMenuClick = (subSubItem) => {
+//     setActiveSubSubMenu((prev) => (prev !== subSubItem.name ? subSubItem.name : prev));
+//     if (subSubItem.link) router.push(subSubItem.link);
+//   };
 
-  //   return (
-  //     <div className="h-full px-4 bg-white rounded-[16px] border border-gray-300">
-  //       <div className="h-[75%] py-5">
+//   return (
+//     <div className="h-full px-4 bg-white rounded-[16px] border border-gray-300">
+//       <div className="h-[75%] py-5">
 
-  //         {menus.map((item) => (
-  //           <div key={item.id}>
-  //             <div
-  //               className={`text-black rounded-lg p-2 flex items-center justify-between cursor-pointer ${
-  //                 active === item.name ? "bg-[#F0F4F9]" : "text-black"
-  //               }`}
-  //               onClick={() => handleMenuClick(item)}
-  //             >
-  //               <span>{item.name}</span>
-  //               {item.subMenu && (
-  //                 <IoIosArrowDown className={`transition-transform ${active === item.name ? "rotate-180" : ""}`} />
-  //               )}
-  //             </div>
+//         {menus.map((item) => (
+//           <div key={item.id}>
+//             <div
+//               className={`text-black rounded-lg p-2 flex items-center justify-between cursor-pointer ${
+//                 active === item.name ? "bg-[#F0F4F9]" : "text-black"
+//               }`}
+//               onClick={() => handleMenuClick(item)}
+//             >
+//               <span>{item.name}</span>
+//               {item.subMenu && (
+//                 <IoIosArrowDown className={`transition-transform ${active === item.name ? "rotate-180" : ""}`} />
+//               )}
+//             </div>
 
-  //             {item.subMenu && active === item.name && (
-  //               <div className="ml-6 mt-2 transition-all duration-300">
-  //                 {item.subMenu.map((subItem) => (
-  //                   <div key={subItem.id}>
-  //                     <div
-  //                       className={`p-2 flex items-center justify-between cursor-pointer ${
-  //                         activeSubMenu === subItem.name ? "bg-[#F0F4F9]" : "text-black"
-  //                       }`}
-  //                       onClick={() => handleSubMenuClick(subItem)}
-  //                     >
-  //                       <span>{subItem.name}</span>
-  //                       {subItem.subMenus && (
-  //                         <IoIosArrowDown className={`transition-transform ${activeSubMenu === subItem.name ? "rotate-180" : ""}`} />
-  //                       )}
-  //                     </div>
+//             {item.subMenu && active === item.name && (
+//               <div className="ml-6 mt-2 transition-all duration-300">
+//                 {item.subMenu.map((subItem) => (
+//                   <div key={subItem.id}>
+//                     <div
+//                       className={`p-2 flex items-center justify-between cursor-pointer ${
+//                         activeSubMenu === subItem.name ? "bg-[#F0F4F9]" : "text-black"
+//                       }`}
+//                       onClick={() => handleSubMenuClick(subItem)}
+//                     >
+//                       <span>{subItem.name}</span>
+//                       {subItem.subMenus && (
+//                         <IoIosArrowDown className={`transition-transform ${activeSubMenu === subItem.name ? "rotate-180" : ""}`} />
+//                       )}
+//                     </div>
 
-  //                     {subItem.subMenus && activeSubMenu === subItem.name && (
-  //                       <div className="ml-6 mt-2 transition-all duration-300">
-  //                         {subItem.subMenus.map((subSubItem) => (
-  //                           <div
-  //                             key={subSubItem.id}
-  //                             className={`p-2 cursor-pointer ${
-  //                               activeSubSubMenu === subSubItem.name ? "bg-[#F0F4F9]" : "text-black"
-  //                             }`}
-  //                             onClick={() => handleSubSubMenuClick(subSubItem)}
-  //                           >
-  //                             <span>{subSubItem.name}</span>
-  //                           </div>
-  //                         ))}
-  //                       </div>
-  //                     )}
-  //                   </div>
-  //                 ))}
-  //               </div>
-  //             )}
-  //           </div>
-  //         ))}
-  //       </div>
-  //     </div>
-  //   );
-  // };
+//                     {subItem.subMenus && activeSubMenu === subItem.name && (
+//                       <div className="ml-6 mt-2 transition-all duration-300">
+//                         {subItem.subMenus.map((subSubItem) => (
+//                           <div
+//                             key={subSubItem.id}
+//                             className={`p-2 cursor-pointer ${
+//                               activeSubSubMenu === subSubItem.name ? "bg-[#F0F4F9]" : "text-black"
+//                             }`}
+//                             onClick={() => handleSubSubMenuClick(subSubItem)}
+//                           >
+//                             <span>{subSubItem.name}</span>
+//                           </div>
+//                         ))}
+//                       </div>
+//                     )}
+//                   </div>
+//                 ))}
+//               </div>
+//             )}
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
 
-  // export default Sidebar;
-
-
-
-
+// export default Sidebar;
 
 //   "use client";
 
@@ -207,11 +203,126 @@
 
 // export default Sidebar;
 
+// "use client";
 
+// import React, { useState } from "react";
+// import { IoIosArrowDown } from "react-icons/io";
+// import { useRouter, usePathname } from "next/navigation";
+// import { menus } from "../lib/Menu";
+
+// const Sidebar = () => {
+//   const [active, setActive] = useState("Home");
+//   const [activeSubMenu, setActiveSubMenu] = useState("");
+//   const [activeSubSubMenu, setActiveSubSubMenu] = useState("");
+//   const router = useRouter();
+//   const pathname = usePathname();
+
+//   const isActive = (link) => {
+//     if (!link) return false;
+//     return pathname.includes(link);
+//   };
+
+//   const handleMenuClick = (item) => {
+//     setActive((prev) => (prev !== item.name ? item.name : prev));
+//     setActiveSubMenu("");
+//     setActiveSubSubMenu("");
+//     if (item.link) router.push(item.link);
+//   };
+
+//   const handleSubMenuClick = (subItem) => {
+//     setActiveSubMenu((prev) => (prev !== subItem.name ? subItem.name : prev));
+//     setActiveSubSubMenu("");
+//     if (subItem.link) router.push(subItem.link);
+//   };
+
+//   const handleSubSubMenuClick = (subSubItem) => {
+//     setActiveSubSubMenu((prev) => (prev !== subSubItem.name ? subSubItem.name : prev));
+//     if (subSubItem.link) router.push(subSubItem.link);
+//   };
+
+//   return (
+//     <div className="h-full px-4 bg-white rounded-[16px] border border-gray-300">
+//       <div className="h-[75%] py-5">
+//         {menus.map((item) => {
+//           const isMenuActive = isActive(item.link);
+//           return (
+//             <div key={item.id}>
+//               <div
+//                 className={`text-black rounded-lg p-2 flex items-center justify-between cursor-pointer ${
+//                   isMenuActive ? "bg-[#F0F4F9]" : "text-black"
+//                 }`}
+//                 onClick={() => handleMenuClick(item)}
+//               >
+//                 <span>{item.name}</span>
+//                 {item.subMenu && (
+//                   <IoIosArrowDown
+//                     className={`transition-transform ${
+//                       active === item.name ? "rotate-180" : ""
+//                     }`}
+//                   />
+//                 )}
+//               </div>
+
+//               {item.subMenu && active === item.name && (
+//                 <div className="ml-6 mt-2 transition-all duration-300">
+//                   {item.subMenu.map((subItem) => {
+//                     const isSubMenuActive = isActive(subItem.link);
+//                     return (
+//                       <div key={subItem.id}>
+//                         <div
+//                           className={`p-2 flex items-center justify-between cursor-pointer ${
+//                             isSubMenuActive ? "bg-[#F0F4F9]" : "text-black"
+//                           }`}
+//                           onClick={() => handleSubMenuClick(subItem)}
+//                         >
+//                           <span>{subItem.name}</span>
+//                           {subItem.subMenus && (
+//                             <IoIosArrowDown
+//                               className={`transition-transform ${
+//                                 activeSubMenu === subItem.name
+//                                   ? "rotate-180"
+//                                   : ""
+//                               }`}
+//                             />
+//                           )}
+//                         </div>
+
+//                         {subItem.subMenus && activeSubMenu === subItem.name && (
+//                           <div className="ml-6 mt-2 transition-all duration-300">
+//                             {subItem.subMenus.map((subSubItem) => {
+//                               const isSubSubMenuActive = isActive(subSubItem.link);
+//                               return (
+//                                 <div
+//                                   key={subSubItem.id}
+//                                   className={`p-2 cursor-pointer ${
+//                                     isSubSubMenuActive ? "bg-[#F0F4F9]" : "text-black"
+//                                   }`}
+//                                   onClick={() => handleSubSubMenuClick(subSubItem)}
+//                                 >
+//                                   <span>{subSubItem.name}</span>
+//                                 </div>
+//                               );
+//                             })}
+//                           </div>
+//                         )}
+//                       </div>
+//                     );
+//                   })}
+//                 </div>
+//               )}
+//             </div>
+//           );
+//         })}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Sidebar;
 
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { useRouter, usePathname } from "next/navigation";
 import { menus } from "../lib/Menu";
@@ -229,22 +340,49 @@ const Sidebar = () => {
   };
 
   const handleMenuClick = (item) => {
-    setActive((prev) => (prev !== item.name ? item.name : prev));
+    setActive(item.name);
     setActiveSubMenu("");
     setActiveSubSubMenu("");
     if (item.link) router.push(item.link);
   };
 
   const handleSubMenuClick = (subItem) => {
-    setActiveSubMenu((prev) => (prev !== subItem.name ? subItem.name : prev));
+    setActiveSubMenu(subItem.name);
     setActiveSubSubMenu("");
     if (subItem.link) router.push(subItem.link);
   };
 
   const handleSubSubMenuClick = (subSubItem) => {
-    setActiveSubSubMenu((prev) => (prev !== subSubItem.name ? subSubItem.name : prev));
+    setActiveSubSubMenu(subSubItem.name);
     if (subSubItem.link) router.push(subSubItem.link);
   };
+
+  // 👉 Set active items based on pathname
+  useEffect(() => {
+    menus.forEach((menu) => {
+      // Check main menu
+      if (menu.link && pathname.includes(menu.link)) {
+        setActive(menu.name);
+      }
+
+      // Check subMenu
+      menu.subMenu?.forEach((sub) => {
+        if (sub.link && pathname.includes(sub.link)) {
+          setActive(menu.name);
+          setActiveSubMenu(sub.name);
+        }
+
+        // Check subSubMenus
+        sub.subMenus?.forEach((subSub) => {
+          if (subSub.link && pathname.includes(subSub.link)) {
+            setActive(menu.name);
+            setActiveSubMenu(sub.name);
+            setActiveSubSubMenu(subSub.name);
+          }
+        });
+      });
+    });
+  }, [pathname]);
 
   return (
     <div className="h-full px-4 bg-white rounded-[16px] border border-gray-300">
@@ -255,7 +393,9 @@ const Sidebar = () => {
             <div key={item.id}>
               <div
                 className={`text-black rounded-lg p-2 flex items-center justify-between cursor-pointer ${
-                  isMenuActive ? "bg-[#F0F4F9]" : "text-black"
+                  isMenuActive || active === item.name
+                    ? "bg-[#F0F4F9]"
+                    : "text-black"
                 }`}
                 onClick={() => handleMenuClick(item)}
               >
@@ -277,7 +417,9 @@ const Sidebar = () => {
                       <div key={subItem.id}>
                         <div
                           className={`p-2 flex items-center justify-between cursor-pointer ${
-                            isSubMenuActive ? "bg-[#F0F4F9]" : "text-black"
+                            isSubMenuActive || activeSubMenu === subItem.name
+                              ? "bg-[#F0F4F9]"
+                              : "text-black"
                           }`}
                           onClick={() => handleSubMenuClick(subItem)}
                         >
@@ -296,14 +438,21 @@ const Sidebar = () => {
                         {subItem.subMenus && activeSubMenu === subItem.name && (
                           <div className="ml-6 mt-2 transition-all duration-300">
                             {subItem.subMenus.map((subSubItem) => {
-                              const isSubSubMenuActive = isActive(subSubItem.link);
+                              const isSubSubMenuActive = isActive(
+                                subSubItem.link
+                              );
                               return (
                                 <div
                                   key={subSubItem.id}
                                   className={`p-2 cursor-pointer ${
-                                    isSubSubMenuActive ? "bg-[#F0F4F9]" : "text-black"
+                                    isSubSubMenuActive ||
+                                    activeSubSubMenu === subSubItem.name
+                                      ? "bg-[#F0F4F9]"
+                                      : "text-black"
                                   }`}
-                                  onClick={() => handleSubSubMenuClick(subSubItem)}
+                                  onClick={() =>
+                                    handleSubSubMenuClick(subSubItem)
+                                  }
                                 >
                                   <span>{subSubItem.name}</span>
                                 </div>
