@@ -171,3 +171,28 @@ export const verifyIdProof = async (userId, status) => {
 };
 
 
+
+
+
+
+
+
+
+
+// export const fetchImagePosts = async (pageNumber = 1, pageSize = 1) => {
+//   try {
+//     const response = await api.get("/posts", {
+//       params: {
+//         pageSize,
+//         pageNumber,
+//         contentType: "image",
+//       },
+//     });
+//     console.log(response)
+//     return response.data.data;
+//     // adjust if needed
+//   } catch (error) {
+//     console.error("Error fetching image posts:", error);
+//     throw error;
+//   }
+// };

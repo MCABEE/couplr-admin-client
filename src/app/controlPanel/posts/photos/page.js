@@ -8,8 +8,8 @@ const page = () => {
   return (
     <div>
       <NavLink />
-      {/* <Table/> */}
-      <ViewPhotos />
+      <Table/>
+      {/* <ViewPhotos /> */}
     </div>
   );
 };
