@@ -93,7 +93,7 @@ export const menus = [
     id: 4,
     name: "Posts",
     hasSubmenu: false,
-     link: "",
+     link: "/controlPanel/posts/photos",
   },
   {
     id: 5,

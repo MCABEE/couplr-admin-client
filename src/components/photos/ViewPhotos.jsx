@@ -1,10 +1,289 @@
-import React from "react";
-import { GrLinkPrevious } from "react-icons/gr";
-import { GrLinkNext } from "react-icons/gr";
+// import React from "react";
+// import { GrLinkPrevious } from "react-icons/gr";
+// import { GrLinkNext } from "react-icons/gr";
+
+// const ViewPhotos = () => {
+//   return (
+//     <div>
+//       <table className="w-full border-spacing-y-2 border-separate mt-10">
+//         <thead className="rounded-2xl ">
+//           <tr className="h-12 p-2 bg-[#C0D8F6] rounded-2xl">
+//             <th className="px-2 h-12 rounded-2xl">
+//               <span className="h-12 flex justify-center items-center">
+//                 <GrLinkPrevious className="text-2xl" />
+//               </span>
+//             </th>
+//             <th className="text-base  font-bold  p-2 rounded-l-2xl">
+//               aaradhya_97
+//             </th>
+//             <th className="text-base border-l-4 border-[#F0F4F9]  p-2">
+//               Sydney, Australia
+//             </th>
+//             <th className="text-base border-l-4 border-[#F0F4F9]   p-2">F</th>
+
+//             <th className="text-base border-l-4 border-[#F0F4F9]   p-2">IND</th>
+//             <th className="text-base text-[#09B438] border-l-4 border-[#F0F4F9]   p-2 rounded-r-2xl">
+//               Active
+//             </th>
+//             <th className="px-2 h-12 rounded-2xl">
+//               <span className="h-12 flex justify-center items-center">
+//                 <GrLinkNext className="text-2xl" />
+//               </span>
+//             </th>
+//           </tr>
+//         </thead>
+//       </table>
+//       <div className="border-spacing-1 border-[#888888] bg-white px-10 rounded-2xl pb-14">
+//         <div className="border-b-[1px] border-[#888888] flex justify-between items-center">
+//           <div className="flex gap-6 p-5 pt-10 ">
+//             <h1 className="text-black text-[54px] font-semibold">04</h1>
+//             <h1 className="text-black text-[24px] font-semibold pt-3">
+//               Photos
+//             </h1>
+//           </div>
+//           <h1 className="text-black text-[16px] pr-20 pt-10 font-normal">
+//             Select all
+//           </h1>
+//         </div>
+
+//         <div className="w-full flex gap-2 py-6 border-b-[1px] border-[#888888]">
+//           <div className="w-[90px] h-[120px] relative">
+//             <img src="/photo1.png" alt="" className="w-full h-full" />
+//             <input
+//               type="checkbox"
+//               id="photo"
+//               name="photo"
+//               value="photo"
+//               className="absolute right-4 top-4 w-[20px] h-[20px]"
+//             />
+//           </div>
+//           <div className="w-[90px] h-[120px] relative">
+//             <img src="/photo1.png" alt="" className="w-full" />
+//             <input
+//               type="checkbox"
+//               id="photo1"
+//               name="photo1"
+//               value="photo1"
+//               className="absolute right-4 top-4 w-[20px] h-[20px]"
+//             />
+//           </div>
+
+//           <div className="w-[90px] h-[120px] relative">
+//             <img src="/photo1.png" alt="" />
+//             <input
+//               type="checkbox"
+//               id="photo2"
+//               name="photo2"
+//               value="photo2"
+//               className="absolute right-4 top-4 w-[20px] h-[20px]"
+//             />
+//           </div>
+//         </div>
+//         <div className="flex gap-10 py-10">
+//           <button className="text-base text-black border border-[#888888] rounded-2xl  w-60 h-14">
+//             Decline
+//           </button>
+//           <button className="text-base text-black border border-[#888888] rounded-2xl  w-60 h-14">
+//             Approve
+//           </button>
+
+//           {/* <button>Approve</button> */}
+//         </div>
+//         <h1 className="text-2xl text-[#444444] font-semibold pb-5">
+//           Select a reason for decline
+//         </h1>
+
+//         <div className="flex gap-16">
+//           <div className=" flex flex-col gap-5">
+//             <div className="flex gap-4">
+//               <input
+//                 type="checkbox"
+//                 id="photo2"
+//                 name="photo2"
+//                 value="photo2"
+//                 className="w-5 h-5"
+//               />
+//               <label className="text-base text-[#2B2B2B]">Not Your Photo</label>
+//             </div>
+//             <div className="flex gap-4">
+//               <input
+//                 type="checkbox"
+//                 id="photo2"
+//                 name="photo2"
+//                 value="photo2"
+//                 className="w-5 h-5"
+//               />
+//               <label className="text-base text-[#2B2B2B]">
+//                 Fake or Misleading
+//               </label>
+//             </div>
+//             <div className="flex gap-4">
+//               <input
+//                 type="checkbox"
+//                 id="photo2"
+//                 name="photo2"
+//                 value="photo2"
+//                 className="w-5 h-5"
+//               />
+//               <label className="text-base text-[#2B2B2B]">
+//                 Obscured Identity
+//               </label>
+//             </div>
+//             <div className="flex gap-4">
+//               <input
+//                 type="checkbox"
+//                 id="photo2"
+//                 name="photo2"
+//                 value="photo2"
+//                 className="w-5 h-5"
+//               />
+//               <label className="text-base text-[#2B2B2B]">
+//                 Nudity or Sexual Content
+//               </label>
+//             </div>
+//             <div className="flex gap-4">
+//               <input
+//                 type="checkbox"
+//                 id="photo2"
+//                 name="photo2"
+//                 value="photo2"
+//                 className="w-5 h-5"
+//               />
+//               <label className="text-base text-[#2B2B2B]">
+//                 Violence or Criminal Activity
+//               </label>
+//             </div>
+//           </div>
+//           <div className=" flex flex-col gap-5">
+//             <div className="flex gap-4">
+//               <input
+//                 type="checkbox"
+//                 id="photo2"
+//                 name="photo2"
+//                 value="photo2"
+//                 className="w-5 h-5"
+//               />
+//               <label className="text-base text-[#2B2B2B]">
+//                 Inappropriate Content
+//               </label>
+//             </div>
+//             <div className="flex gap-4">
+//               <input
+//                 type="checkbox"
+//                 id="photo2"
+//                 name="photo2"
+//                 value="photo2"
+//                 className="w-5 h-5"
+//               />
+//               <label className="text-base text-[#2B2B2B]">Low Quality</label>
+//             </div>
+//             <div className="flex gap-4">
+//               <input
+//                 type="checkbox"
+//                 id="photo2"
+//                 name="photo2"
+//                 value="photo2"
+//                 className="w-5 h-5"
+//               />
+//               <label className="text-base text-[#2B2B2B]">
+//                 Multiple People
+//               </label>
+//             </div>
+//             <div className="flex gap-4">
+//               <input
+//                 type="checkbox"
+//                 id="photo2"
+//                 name="photo2"
+//                 value="photo2"
+//                 className="w-5 h-5"
+//               />
+//               <label className="text-base text-[#2B2B2B]">
+//                 Duplicate Upload
+//               </label>
+//             </div>
+//             <div className="flex gap-4">
+//               <input
+//                 type="checkbox"
+//                 id="photo2"
+//                 name="photo2"
+//                 value="photo2"
+//                 className="w-5 h-5"
+//               />
+//               <label className="text-base text-[#2B2B2B]">
+//                 Violence or Criminal Activity
+//               </label>
+//             </div>
+//           </div>
+//         </div>
+//         <div className=" px-[34px] py-[20px] border border-[#888888] rounded-[15px] mr-[500px] mt-16 ">
+//           <h1 className="text-base text-[#202020] font-semibold pb-3">
+//             Fake or Misleading:
+//           </h1>
+//           <p className="text-base text-[#202020]">
+//             The upload includes wallpapers, visual graphics,
+//             <br /> or AI-generated content.
+//           </p>
+//         </div>
+//         <button className="text-base text-black border border-[#888888] rounded-2xl  w-60 h-14 mt-16">
+//         Confirm
+//           </button>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ViewPhotos;
+
+
+
+
+
+
+
+
+
+"use client";
+
+import React, { useEffect, useState } from "react";
+import { GrLinkPrevious, GrLinkNext } from "react-icons/gr";
+import { fetchUserPostsById } from "@/api/postsApi";
 
 const ViewPhotos = () => {
+  const [photos, setPhotos] = useState([]);
+  const [selectedPhotos, setSelectedPhotos] = useState([]);
+  const [showReasons, setShowReasons] = useState(false);
+
+  useEffect(() => {
+    const userId = localStorage.getItem("selectedUserId");
+    if (userId) {
+      fetchUserPostsById(userId).then((data) => {
+        const imagePosts = data.posts.filter(
+          (post) => post.contentType === "image"
+        );
+        setPhotos(imagePosts);
+      });
+    }
+  }, []);
+
+  const handlePhotoSelect = (photoId) => {
+    setSelectedPhotos((prev) =>
+      prev.includes(photoId)
+        ? prev.filter((id) => id !== photoId)
+        : [...prev, photoId]
+    );
+  };
+
+  const handleDecline = () => {
+    if (selectedPhotos.length > 0) {
+      setShowReasons(true);
+    } else {
+      alert("Select at least one photo to decline.");
+    }
+  };
+
   return (
     <div>
+      {/* Top Bar - Keep As Is */}
       <table className="w-full border-spacing-y-2 border-separate mt-10">
         <thead className="rounded-2xl ">
           <tr className="h-12 p-2 bg-[#C0D8F6] rounded-2xl">
@@ -13,16 +292,15 @@ const ViewPhotos = () => {
                 <GrLinkPrevious className="text-2xl" />
               </span>
             </th>
-            <th className="text-base  font-bold  p-2 rounded-l-2xl">
+            <th className="text-base font-bold p-2 rounded-l-2xl bg-white text-black">
               aaradhya_97
             </th>
-            <th className="text-base border-l-4 border-[#F0F4F9]  p-2">
+            <th className="text-base border-l-4 border-[#C0D8F6]  p-2 bg-white text-black">
               Sydney, Australia
             </th>
-            <th className="text-base border-l-4 border-[#F0F4F9]   p-2">F</th>
-
-            <th className="text-base border-l-4 border-[#F0F4F9]   p-2">IND</th>
-            <th className="text-base text-[#09B438] border-l-4 border-[#F0F4F9]   p-2 rounded-r-2xl">
+            <th className="text-base border-l-4 border-[#C0D8F6]   p-2 bg-white text-black">F</th>
+            <th className="text-base border-l-4 border-[#C0D8F6]   p-2 bg-white text-black">IND</th>
+            <th className="text-base text-[#09B438] border-l-4 border-[#C0D8F6] p-2 rounded-r-2xl bg-white ">
               Active
             </th>
             <th className="px-2 h-12 rounded-2xl">
@@ -33,10 +311,14 @@ const ViewPhotos = () => {
           </tr>
         </thead>
       </table>
+
+      {/* Main Photo Display */}
       <div className="border-spacing-1 border-[#888888] bg-white px-10 rounded-2xl pb-14">
         <div className="border-b-[1px] border-[#888888] flex justify-between items-center">
           <div className="flex gap-6 p-5 pt-10 ">
-            <h1 className="text-black text-[54px] font-semibold">04</h1>
+            <h1 className="text-black text-[54px] font-semibold">
+              {photos.length.toString().padStart(2, "0")}
+            </h1>
             <h1 className="text-black text-[24px] font-semibold pt-3">
               Photos
             </h1>
@@ -46,187 +328,94 @@ const ViewPhotos = () => {
           </h1>
         </div>
 
-        <div className="w-full flex gap-2 py-6 border-b-[1px] border-[#888888]">
-          <div className="w-[90px] h-[120px] relative">
-            <img src="/photo1.png" alt="" className="w-full h-full" />
-            <input
-              type="checkbox"
-              id="photo"
-              name="photo"
-              value="photo"
-              className="absolute right-4 top-4 w-[20px] h-[20px]"
-            />
-          </div>
-          <div className="w-[90px] h-[120px] relative">
-            <img src="/photo1.png" alt="" className="w-full" />
-            <input
-              type="checkbox"
-              id="photo1"
-              name="photo1"
-              value="photo1"
-              className="absolute right-4 top-4 w-[20px] h-[20px]"
-            />
-          </div>
-
-          <div className="w-[90px] h-[120px] relative">
-            <img src="/photo1.png" alt="" />
-            <input
-              type="checkbox"
-              id="photo2"
-              name="photo2"
-              value="photo2"
-              className="absolute right-4 top-4 w-[20px] h-[20px]"
-            />
-          </div>
+        {/* Photos */}
+        <div className="w-full flex gap-2 py-6 border-b-[1px] border-[#888888] flex-wrap">
+          {photos.map((photo) => (
+            <div
+              key={photo._id}
+              className="w-[90px] h-[120px] relative"
+            >
+              <img
+                src={photo.content.url}
+                alt="user_photo"
+                className="w-full h-full object-cover"
+              />
+              <input
+                type="checkbox"
+                checked={selectedPhotos.includes(photo._id)}
+                onChange={() => handlePhotoSelect(photo._id)}
+                className="absolute right-4 top-4 w-[20px] h-[20px]"
+              />
+            </div>
+          ))}
         </div>
+
+        {/* Action Buttons */}
         <div className="flex gap-10 py-10">
-          <button className="text-base text-black border border-[#888888] rounded-2xl  w-60 h-14">
+          <button
+            className="text-base text-black border border-[#888888] rounded-2xl w-60 h-14"
+            onClick={handleDecline}
+          >
             Decline
           </button>
-          <button className="text-base text-black border border-[#888888] rounded-2xl  w-60 h-14">
+          <button className="text-base text-black border border-[#888888] rounded-2xl w-60 h-14">
             Approve
           </button>
+        </div>
 
-          {/* <button>Approve</button> */}
-        </div>
-        <h1 className="text-2xl text-[#444444] font-semibold pb-5">
-          Select a reason for decline
-        </h1>
+        {/* Decline Reasons */}
+        {showReasons && (
+          <>
+            <h1 className="text-2xl text-[#444444] font-semibold pb-5">
+              Select a reason for decline
+            </h1>
 
-        <div className="flex gap-16">
-          <div className=" flex flex-col gap-5">
-            <div className="flex gap-4">
-              <input
-                type="checkbox"
-                id="photo2"
-                name="photo2"
-                value="photo2"
-                className="w-5 h-5"
-              />
-              <label className="text-base text-[#2B2B2B]">Not Your Photo</label>
+            <div className="flex gap-16">
+              <div className=" flex flex-col gap-5">
+                {[
+                  "Not Your Photo",
+                  "Fake or Misleading",
+                  "Obscured Identity",
+                  "Nudity or Sexual Content",
+                  "Violence or Criminal Activity",
+                ].map((reason, i) => (
+                  <div key={i} className="flex gap-4">
+                    <input type="checkbox" className="w-5 h-5" />
+                    <label className="text-base text-[#2B2B2B]">{reason}</label>
+                  </div>
+                ))}
+              </div>
+              <div className=" flex flex-col gap-5">
+                {[
+                  "Inappropriate Content",
+                  "Low Quality",
+                  "Multiple People",
+                  "Duplicate Upload",
+                  "Violence or Criminal Activity",
+                ].map((reason, i) => (
+                  <div key={i} className="flex gap-4">
+                    <input type="checkbox" className="w-5 h-5" />
+                    <label className="text-base text-[#2B2B2B]">{reason}</label>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="flex gap-4">
-              <input
-                type="checkbox"
-                id="photo2"
-                name="photo2"
-                value="photo2"
-                className="w-5 h-5"
-              />
-              <label className="text-base text-[#2B2B2B]">
-                Fake or Misleading
-              </label>
+
+            <div className=" px-[34px] py-[20px] border border-[#888888] rounded-[15px] mr-[500px] mt-16 ">
+              <h1 className="text-base text-[#202020] font-semibold pb-3">
+                Fake or Misleading:
+              </h1>
+              <p className="text-base text-[#202020]">
+                The upload includes wallpapers, visual graphics,
+                <br /> or AI-generated content.
+              </p>
             </div>
-            <div className="flex gap-4">
-              <input
-                type="checkbox"
-                id="photo2"
-                name="photo2"
-                value="photo2"
-                className="w-5 h-5"
-              />
-              <label className="text-base text-[#2B2B2B]">
-                Obscured Identity
-              </label>
-            </div>
-            <div className="flex gap-4">
-              <input
-                type="checkbox"
-                id="photo2"
-                name="photo2"
-                value="photo2"
-                className="w-5 h-5"
-              />
-              <label className="text-base text-[#2B2B2B]">
-                Nudity or Sexual Content
-              </label>
-            </div>
-            <div className="flex gap-4">
-              <input
-                type="checkbox"
-                id="photo2"
-                name="photo2"
-                value="photo2"
-                className="w-5 h-5"
-              />
-              <label className="text-base text-[#2B2B2B]">
-                Violence or Criminal Activity
-              </label>
-            </div>
-          </div>
-          <div className=" flex flex-col gap-5">
-            <div className="flex gap-4">
-              <input
-                type="checkbox"
-                id="photo2"
-                name="photo2"
-                value="photo2"
-                className="w-5 h-5"
-              />
-              <label className="text-base text-[#2B2B2B]">
-                Inappropriate Content
-              </label>
-            </div>
-            <div className="flex gap-4">
-              <input
-                type="checkbox"
-                id="photo2"
-                name="photo2"
-                value="photo2"
-                className="w-5 h-5"
-              />
-              <label className="text-base text-[#2B2B2B]">Low Quality</label>
-            </div>
-            <div className="flex gap-4">
-              <input
-                type="checkbox"
-                id="photo2"
-                name="photo2"
-                value="photo2"
-                className="w-5 h-5"
-              />
-              <label className="text-base text-[#2B2B2B]">
-                Multiple People
-              </label>
-            </div>
-            <div className="flex gap-4">
-              <input
-                type="checkbox"
-                id="photo2"
-                name="photo2"
-                value="photo2"
-                className="w-5 h-5"
-              />
-              <label className="text-base text-[#2B2B2B]">
-                Duplicate Upload
-              </label>
-            </div>
-            <div className="flex gap-4">
-              <input
-                type="checkbox"
-                id="photo2"
-                name="photo2"
-                value="photo2"
-                className="w-5 h-5"
-              />
-              <label className="text-base text-[#2B2B2B]">
-                Violence or Criminal Activity
-              </label>
-            </div>
-          </div>
-        </div>
-        <div className=" px-[34px] py-[20px] border border-[#888888] rounded-[15px] mr-[500px] mt-16 ">
-          <h1 className="text-base text-[#202020] font-semibold pb-3">
-            Fake or Misleading:
-          </h1>
-          <p className="text-base text-[#202020]">
-            The upload includes wallpapers, visual graphics,
-            <br /> or AI-generated content.
-          </p>
-        </div>
-        <button className="text-base text-black border border-[#888888] rounded-2xl  w-60 h-14 mt-16">
-        Confirm
-          </button>
+
+            <button className="text-base text-black border border-[#888888] rounded-2xl  w-60 h-14 mt-16">
+              Confirm
+            </button>
+          </>
+        )}
       </div>
     </div>
   );
