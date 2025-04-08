@@ -3,14 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "env-cmd -f env/.env.local next dev",
+    "dev:old": "env-cmd -f env/.env.local next dev -p 3000",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
-    "build:local": "env-cmd -f env/.env.local next build",
-    "build:dev": "env-cmd -f env/.env.dev next build",
-    "build:staging": "env-cmd -f env/.env.staging next build",
-    "build:prod": "env-cmd -f env/.env.prod next build"
+    "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx ."
   },
   "dependencies": {
     "axios": "^1.8.4",
@@ -28,5 +25,10 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "tailwindcss": "^4"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "sharp"
+    ]
   }
 }

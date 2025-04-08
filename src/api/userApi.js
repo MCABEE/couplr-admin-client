@@ -8,7 +8,7 @@
 //         pageNumber: 1,
 //         status: status,
 //       },
-      
+
 //     });
 
 //     console.log(response)
@@ -18,14 +18,6 @@
 //     throw error;
 //   }
 // };
-
-
-
-
-
-
-
-
 
 // import api from "./axiosInstance";
 
@@ -46,13 +38,6 @@
 //   }
 // };
 
-
-
-
-
-
-
-
 // import api from "./axiosInstance";
 // export const fetchUsers = async (status = "NEW", pageNumber = 1, pageSize = 10) => {
 //   try {
@@ -70,35 +55,6 @@
 //     throw error;
 //   }
 // };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 import api from "./axiosInstance";
 
@@ -125,7 +81,7 @@ export const fetchTotalUsers = async (pageNumber = 1, pageSize = 10) => {
 // Reusable function to fetch users by status
 const fetchUsersByStatus = async (status, pageNumber = 1, pageSize = 10) => {
   try {
-    const response = await api.get(`/users`, {
+    const response = await api.get(`/admin/users`, {
       params: {
         pageSize,
         pageNumber,
@@ -140,26 +96,21 @@ const fetchUsersByStatus = async (status, pageNumber = 1, pageSize = 10) => {
   }
 };
 
-
-
 export const fetchUserById = async (userId) => {
   try {
-    const response = await api.get(`/users/${userId}`);
-    console.log(response)
+    const response = await api.get(`/admin/users/${userId}`);
+    console.log(response);
     return response.data;
-     // Ensure this matches your API response format
-  } 
-  catch (error) {
+    // Ensure this matches your API response format
+  } catch (error) {
     console.error(`Error fetching user with ID ${userId}:`, error);
     throw error;
   }
-  
 };
-
 
 export const verifyIdProof = async (userId, status) => {
   try {
-    const response = await api.patch(`/users/${userId}/verify`, {
+    const response = await api.patch(`/admin/users/${userId}/verify`, {
       verificationStatus: status,
     });
 
@@ -169,15 +120,6 @@ export const verifyIdProof = async (userId, status) => {
     throw error;
   }
 };
-
-
-
-
-
-
-
-
-
 
 // export const fetchImagePosts = async (pageNumber = 1, pageSize = 1) => {
 //   try {
